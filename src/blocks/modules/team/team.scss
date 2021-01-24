@@ -1,0 +1,112 @@
+.team {
+
+    // .team__items
+
+    &__items {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: $gutter;
+        @media(max-width: 991px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    // .team__item
+
+    &__item {
+        position: relative;
+        min-height: 440px;
+        cursor: pointer;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        &:hover {
+            .team-member__info {
+                opacity: 1;
+                bottom: 15px;
+            }
+        }
+        @media(max-width: 575px) {
+            grid-column: 1 / 3;
+        }
+    }
+}
+
+.team-member {
+
+    // .team-member__info
+
+    &__info {
+        position: absolute;
+        bottom: 0px;
+        left: 18px;
+        width: 335px / 370px * 100%;
+        min-height: 241px;
+        box-shadow: 3px 6px 16px rgba(20, 20, 21, 0.18);
+        background-color: #6df6eb;
+        padding: 42px 43px 42px 38px;
+        opacity: 0;
+        transition: .3s ease;
+        &:before {
+           content: '';
+           position: absolute;
+           top: -19px;
+           left: 11px;
+           width: 42px;
+           height: 37px;
+           background-image: url('../img/icons/caret.svg');
+        }
+        @media(max-width: 767px) {
+            padding: 30px;
+        }
+        @media(max-width: 575px) {
+            padding: 20px;
+        }
+    }
+
+    // .team-member__info-top
+
+    &__info-top {
+        font-family: $weather;
+        margin-bottom: 23px;
+    }
+
+    // .team-member__name
+
+    &__name {
+        font-size: 20px;
+        font-weight: 700;
+        color: #272727;
+        letter-spacing: 1px;
+    }
+
+    // .team-member__position
+
+    &__position {
+        font-size: 15px;
+        font-style: italic;
+        line-height: 24px;
+        letter-spacing: 0.45px;
+        color: rgba(#767070, .95);
+    }
+
+    // .team-member__info-text
+
+    &__info-text {
+        font-family: $raleway;
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 37px;
+    }
+
+    // .team-member__socials
+
+    &__socials {
+        display: flex;
+        align-items: start;
+    }
+
+    &__social-item + &__social-item {
+        margin-left: 15px;
+    }
+}

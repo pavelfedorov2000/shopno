@@ -1,0 +1,71 @@
+.container {
+    max-width: $container + 15px * 2;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section {
+
+    padding: 122px 0;
+    @media(max-width: 1200px) {
+        padding: 100px 0;
+    }
+    @media(max-width: 991px) {
+        padding: 70px 0;
+    }
+    @media(max-width: 767px) {
+        padding: 50px 0;
+    }
+    
+    &__head {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 122px;
+        @media(max-width: 1200px) {
+            margin-bottom: 100px;
+        }
+        @media(max-width: 991px) {
+            margin-bottom: 70px;
+        }
+        @media(max-width: 767px) {
+            margin-bottom: 50px;
+        }
+        @media(max-width: 575px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__title {
+        letter-spacing: 2.28px;
+        opacity: .9;
+        margin-bottom: 15px;
+        @media(max-width: 991px) {
+            font-size: 32px;
+        }
+        @media(max-width: 767px) {
+            font-size: 30px;
+        }
+        @media(max-width: 575px) {
+            font-size: 27px;
+        }
+    }
+    
+    &__subtitle {
+        font-family: $weather;
+        font-size: 17px;
+        line-height: 28px;
+        letter-spacing: 1.02px;
+        opacity: 0.62;
+        @media(max-width: 575px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+}
+
+
+@import '../components/titles';
+@import '../components/slick';

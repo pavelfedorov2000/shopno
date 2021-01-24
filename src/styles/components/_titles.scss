@@ -1,0 +1,10 @@
+.title {
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &--smaller {
+        font-family: $weather;
+        font-size: 20px;
+    }
+}

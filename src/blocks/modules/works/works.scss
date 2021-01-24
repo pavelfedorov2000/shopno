@@ -1,0 +1,29 @@
+.works {
+
+    // .works__items
+
+    &__items {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: $gutter;
+        @media(max-width: 767px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    // .works__item
+
+    &__item {
+        max-width: 100%;
+        height: auto;
+        @media(max-width: 400px) {
+            grid-column: 1 / 3;
+        }
+    }
+
+    // .works__item-img
+
+    &__item-img {
+        object-fit: contain;
+    }
+}
